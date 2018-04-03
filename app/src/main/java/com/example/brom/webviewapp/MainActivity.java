@@ -8,7 +8,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class MainActivity extends AppCompatActivity {
     // Create a private member variable that can hold our WebView
@@ -22,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         WebView webView = new WebView(this);
+        WebViewClient webViewClient = new WebViewClient();
+        WebSettings webSettings = webView.getSettings();
+        setContentView(webView);
+        webSettings.setJavaScriptEnabled(true);
         setContentView(webView);
         webView.loadUrl("http://wwwlab.iit.his.se/b17antah/Mobilapplikationer/App-prototyp/App-prototyp_main.html");
     }
