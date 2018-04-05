@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setJavaScriptEnabled(true);
         setContentView(webView);
         webView.loadUrl("http://wwwlab.iit.his.se/b17antah/Mobilapplikationer/App-prototyp/App-prototyp_main.html");
+        //webView.loadUrl("file:///android_asset/about.html");
     }
 
     @Override
